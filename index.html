@@ -5,6 +5,17 @@
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
   <title>aryt's place</title>
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0V1L3TNXGW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0V1L3TNXGW');
+</script>
+
 <body>
  <div class="window" style="width: 300px; top: 167px; left: 479px;">
     <div class="title-bar">
@@ -26,6 +37,24 @@ My goal is to craft experiences that are fun, thoughtful, and memorable.</p>
     </div>
   </div>
 
+<div class="window" style="width: 300px; top: 530px; left: 707px;">
+  <div class="title-bar">
+    <div class="title-bar-text">Email</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <p><strong style="color:#f3724b">My email!</strong></p>
+    <button class="default" id="show-email">Click Here!</button>
+    <div id="email" style="margin-top:10px; display:none; color:#f3724b; font-weight:bold;">
+      aryt.hello@gmail.com
+    </div>
+  </div>
+</div>
+
 <div class="window" style="width: 300px; top: 50px; left: 50px;">
   <div class="title-bar">
     <div class="title-bar-text">Discord</div>
@@ -45,75 +74,72 @@ My goal is to craft experiences that are fun, thoughtful, and memorable.</p>
   </div>
 </div>
 
-  <div class="window" style="width: 300px; top: 235px; left: 948px;">
-    <div class="title-bar">
-      <div class="title-bar-text">Github</div>
-      <div class="title-bar-controls">
-        <button aria-label="Minimize"></button>
-        <button aria-label="Maximize"></button>
-        <button aria-label="Close"></button>
-      </div>
-    </div>
-    <div class="window-body">
-      <p>Add me on</p>
-      <p><strong style=color:#24292e>Github</strong></p>
-      <a href="https://github.com/ayrthello" target="_blank">
-        <button class="default">Click Here!</button>
-      </a>
+<div class="window" style="width: 300px; top: 235px; left: 948px;">
+  <div class="title-bar">
+    <div class="title-bar-text">Github</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
     </div>
   </div>
-
-  <div class="window" style="width: 300px; top: 487px; left: 246px;">
-    <div class="title-bar">
-      <div class="title-bar-text">Digg</div>
-      <div class="title-bar-controls">
-        <button aria-label="Minimize"></button>
-        <button aria-label="Maximize"></button>
-        <button aria-label="Close"></button>
-      </div>
-    </div>
-    <div class="window-body">
-      <p>Add me on</p>
-      <p><strong style=color:#1f65db>Digg</strong></p>
-      <a href="https://beta.digg.com/@aryt" target="_blank">
-        <button class="default">Click Here!</button>
-      </a>
+  <div class="window-body">
+    <p>Add me on</p>
+    <p><strong style=color:#24292e>Github</strong></p>
+    <a href="https://github.com/ayrthello" target="_blank">
+      <button class="default">Click Here!</button>
+    </a>
+  </div>
+</div>
+<div class="window" style="width: 300px; top: 487px; left: 246px;">
+  <div class="title-bar">
+    <div class="title-bar-text">Digg</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
     </div>
   </div>
-
-
-  <div class="window" style="width: 300px; top: 613px; left: 1071px;">
-    <div class="title-bar">
-      <div class="title-bar-text">What's your mood?</div>
-      <div class="title-bar-controls">
-        <button aria-label="Minimize"></button>
-        <button aria-label="Maximize"></button>
-        <button aria-label="Close"></button>
-      </div>
-    </div>
-    <div class="window-body">
-      <fieldset>
-        <legend>Today's mood</legend>
-        <div class="field-row">
-          <input id="radio13" type="radio" name="fieldset-example2" value="Really Good! (:">
-          <label for="radio13">Really Good! (:</label>
-        </div>
-        <div class="field-row">
-          <input id="radio14" type="radio" name="fieldset-example2" value="Good">
-          <label for="radio14">Good</label>
-        </div>
-        <div class="field-row">
-          <input id="radio15" type="radio" name="fieldset-example2" value="Okay">
-          <label for="radio15">Could Be Better</label>
-        </div>
-        <div class="field-row">
-          <input id="radio16" type="radio" name="fieldset-example2" value="I'm so mad!">
-          <label for="radio16">I'm so mad!!!</label>
-        </div>
-        <p id="response"></p>
-      </fieldset>
+  <div class="window-body">
+    <p>Add me on</p>
+    <p><strong style=color:#1f65db>Digg</strong></p>
+    <a href="https://beta.digg.com/@aryt" target="_blank">
+      <button class="default">Click Here!</button>
+    </a>
+  </div>
+</div>
+<div class="window" style="width: 300px; top: 613px; left: 1071px;">
+  <div class="title-bar">
+    <div class="title-bar-text">What's your mood?</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
     </div>
   </div>
+  <div class="window-body">
+    <fieldset>
+      <legend>Today's mood</legend>
+      <div class="field-row">
+        <input id="radio13" type="radio" name="fieldset-example2" value="Really Good! (:">
+        <label for="radio13">Really Good! (:</label>
+      </div>
+      <div class="field-row">
+        <input id="radio14" type="radio" name="fieldset-example2" value="Good">
+        <label for="radio14">Good</label>
+      </div>
+      <div class="field-row">
+        <input id="radio15" type="radio" name="fieldset-example2" value="Okay">
+        <label for="radio15">Could Be Better</label>
+      </div>
+      <div class="field-row">
+        <input id="radio16" type="radio" name="fieldset-example2" value="I'm so mad!">
+        <label for="radio16">I'm so mad!!!</label>
+      </div>
+      <p id="response"></p>
+    </fieldset>
+  </div>
+</div>
 </body>
 
 <style>
@@ -139,6 +165,10 @@ My goal is to craft experiences that are fun, thoughtful, and memorable.</p>
 <script>
   document.getElementById('show-discord-username').onclick = function() {
     document.getElementById('discord-username').style.display = 'block';
+  };
+
+  document.getElementById('show-email').onclick = function() {
+    document.getElementById('email').style.display = 'block';
   };
 
   const radios = document.querySelectorAll('input[name="fieldset-example2"]');
