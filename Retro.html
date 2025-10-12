@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/98.css"
+>
+  <title>Welcome (:</title>
+</head>
+<body>
+ <div class="window" style="width: 300px; top: 167px; left: 479px;">
+    <div class="title-bar">
+      <div class="title-bar-text">About Me</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <p>Hey👋 I'm</p>
+      <p><strong style=color:#2686f3>aryt</strong></p>
+      <p style="font-size: 13px;">Hi! I’m a young programmer and game developer based in Canada 🇨🇦.
+I love creating interactive experiences that mix storytelling, design, and creativity.
+From experimental Chrome extensions to web-based games and unique digital worlds, I’m always exploring new ways to make ideas come to life.
+My goal is to craft experiences that are fun, thoughtful, and memorable.</p>
+      </a>
+    </div>
+  </div>
+
+<div class="window" style="width: 300px; top: 50px; left: 50px;">
+  <div class="title-bar">
+    <div class="title-bar-text">Discord</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <p>Add me on</p>
+    <p><strong style="color:#5865f2">Discord!</strong></p>
+    <button class="default" id="show-discord-username">Click Here!</button>
+    <div id="discord-username" style="margin-top:10px; display:none; color:#5865f2; font-weight:bold;">
+      Username: lilg0go
+    </div>
+  </div>
+</div>
+
+  <div class="window" style="width: 300px; top: 235px; left: 948px;">
+    <div class="title-bar">
+      <div class="title-bar-text">Github</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <p>Add me on</p>
+      <p><strong style=color:#24292e>Github</strong></p>
+      <a href="https://github.com/ayrthello" target="_blank">
+        <button class="default">Click Here!</button>
+      </a>
+    </div>
+  </div>
+
+  <div class="window" style="width: 300px; top: 487px; left: 246px;">
+    <div class="title-bar">
+      <div class="title-bar-text">Digg</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <p>Add me on</p>
+      <p><strong style=color:#1f65db>Digg</strong></p>
+      <a href="https://beta.digg.com/@aryt" target="_blank">
+        <button class="default">Click Here!</button>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="window" style="width: 300px; top: 613px; left: 1071px;">
+    <div class="title-bar">
+      <div class="title-bar-text">What's your mood?</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <fieldset>
+        <legend>Today's mood</legend>
+        <div class="field-row">
+          <input id="radio13" type="radio" name="fieldset-example2" value="Really Good! (:">
+          <label for="radio13">Really Good! (:</label>
+        </div>
+        <div class="field-row">
+          <input id="radio14" type="radio" name="fieldset-example2" value="Good">
+          <label for="radio14">Good</label>
+        </div>
+        <div class="field-row">
+          <input id="radio15" type="radio" name="fieldset-example2" value="Okay">
+          <label for="radio15">Could Be Better</label>
+        </div>
+        <div class="field-row">
+          <input id="radio16" type="radio" name="fieldset-example2" value="I'm so mad!">
+          <label for="radio16">I'm so mad!!!</label>
+        </div>
+        <p id="response"></p>
+      </fieldset>
+    </div>
+  </div>
+</body>
+
+<style>
+  body {
+    background-image: url('./win98-bg.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    user-select: none;
+    cursor: url('http://www.rw-designer.com/cursor-extern.php?id=164571'), auto;
+  }
+  .window-body {
+    text-align: center;
+  }
+  .window {
+    margin-bottom: 20px;
+    position: absolute;
+  }
+</style>
+<script>
+  document.getElementById('show-discord-username').onclick = function() {
+    document.getElementById('discord-username').style.display = 'block';
+  };
+
+  const radios = document.querySelectorAll('input[name="fieldset-example2"]');
+  const responseElement = document.getElementById('response');
+
+  radios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      switch (radio.value) {
+        case "Really Good! (:":
+          responseElement.textContent = "Well that's cool";
+          break;
+        case "Good":
+          responseElement.textContent = "Glad to hear that!";
+          break;
+        case "Okay":
+          responseElement.textContent = "Hope your day gets better!";
+          break;
+        case "I'm so mad!":
+          responseElement.textContent = "Take a deep breath, it'll be okay.";
+          break;
+        default:
+          responseElement.textContent = "";
+      }
+    });
+  });
+
+  function makeDraggable(draggableElement) {
+    const titleBar = draggableElement.querySelector('.title-bar');
+    let offsetX = 0, offsetY = 0, isDragging = false;
+
+    titleBar.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      offsetX = e.clientX - draggableElement.offsetLeft;
+      offsetY = e.clientY - draggableElement.offsetTop;
+      draggableElement.style.zIndex = 1000;
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (isDragging) {
+        draggableElement.style.left = `${e.clientX - offsetX}px`;
+        draggableElement.style.top = `${e.clientY - offsetY}px`;
+      }
+    });
+
+    document.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+  }
+
+  document.querySelectorAll('.window').forEach(makeDraggable);
+</script>
+</html>
