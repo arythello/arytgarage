@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="https://unpkg.com/98.css">
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
   <title>aryt's place</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -69,7 +70,7 @@ My goal is to craft experiences that are fun, thoughtful, and memorable.</p>
     <p><strong style="color:#5865f2">Discord!</strong></p>
     <button class="default" id="show-discord-username">Click Here!</button>
     <div id="discord-username" style="margin-top:10px; display:none; color:#5865f2; font-weight:bold;">
-      Username: aryt.hello
+      Username: lilg0go
     </div>
   </div>
 </div>
@@ -86,7 +87,7 @@ My goal is to craft experiences that are fun, thoughtful, and memorable.</p>
   <div class="window-body">
     <p>Add me on</p>
     <p><strong style=color:#24292e>Github</strong></p>
-    <a href="https://github.com/arythello" target="_blank">
+    <a href="https://github.com/ayrthello" target="_blank">
       <button class="default">Click Here!</button>
     </a>
   </div>
@@ -160,6 +161,48 @@ My goal is to craft experiences that are fun, thoughtful, and memorable.</p>
   .window {
     margin-bottom: 20px;
     position: absolute;
+  }
+
+  /* Responsive rules for smaller screens */
+  @media (max-width: 900px) {
+    body {
+      height: auto;
+      padding: 20px;
+      flex-direction: column;
+      align-items: stretch;
+      background-position: center;
+      background-size: cover;
+    }
+
+    /* Make windows flow vertically and fill width */
+    .window {
+      position: static !important;
+      width: calc(100% - 40px) !important;
+      max-width: 640px;
+      margin: 12px auto !important;
+      left: auto !important;
+      top: auto !important;
+      box-sizing: border-box;
+    }
+
+    .window .title-bar-text {
+      font-size: 1rem;
+    }
+
+    .window-body p {
+      font-size: 15px;
+    }
+
+    .window-body button,
+    .window-body .default {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  /* Disable custom cursor on touch devices */
+  @media (hover: none) {
+    body { cursor: auto !important; }
   }
 </style>
 <script>
